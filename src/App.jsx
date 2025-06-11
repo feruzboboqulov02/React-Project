@@ -4,6 +4,11 @@
  import {ways} from './data'
 
 export default function App() {
+  let content ="Click the button";
+  function handleClick(type) {
+    console.log(`Button clicked! Type: ${type}`);
+    content = type;
+  }
   return (
     <div>
       <Header />
@@ -19,9 +24,10 @@ export default function App() {
         </section>
         <section>
           <h3>Почему мы?</h3>
-          <Button text= "Send" />
-          <Button text= "Learn More" />
-          <Button text= "Contact Us" />
+          <Button onClick={() => handleClick('way')}>Send</Button>
+          <Button onClick={() => handleClick('easy')}>Learn More</Button>
+          <Button onClick={() => handleClick('program')}>Contact Us</Button>
+          <p>{content}</p>
         </section>
       </main>
     </div>
