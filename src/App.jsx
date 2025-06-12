@@ -5,7 +5,7 @@
  import {useState} from 'react';
 
 export default function App() {
-  const [contentType, setContentType] =useState("Click the button");
+  const [contentType, setContentType] =useState(null); 
   //let content ="Click the button";
   function handleClick(type) {
     //console.log(`Button clicked! Type: ${type}`);
@@ -26,10 +26,20 @@ export default function App() {
         </section>
         <section>
           <h3>Почему мы?</h3>
-          <Button onClick={() => handleClick('way')}>Подход</Button>
-          <Button onClick={() => handleClick('easy')}>Доступность</Button>
-          <Button onClick={() => handleClick('program')}>Концентрация</Button>
+          <Button isActive={contentType === 'way'} onClick={() => handleClick('way')}>Подход</Button>
+          <Button isActive={contentType === 'easy'} onClick={() => handleClick('easy')}>Доступность</Button>
+          <Button isActive={contentType === 'program'} onClick={() => handleClick('program')}>Концентрация</Button>
+
+
+          {/* {contentType?( 
           <p>{differences[contentType]}</p>
+          ):(<p>Click the button</p>)} */}
+
+          {/* {!contentType ? <p>Click the button</p> : null}
+          {contentType ? <p>{differences[contentType]}</p> : null} */}
+
+          {!contentType && <p>Click the button</p>}
+          {contentType && <p>{differences[contentType]}</p>}
         </section>
       </main>
     </div>
