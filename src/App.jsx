@@ -18,10 +18,7 @@ export default function App() {
         <section>
           <h3>Как обучиться веб-разработке</h3>
           <ul>
-            <WayToTeach {...ways[0]} />
-            <WayToTeach {...ways[1]} />
-            <WayToTeach {...ways[2]} />
-            <WayToTeach {...ways[3]} />
+            {ways.map((way)=>(<WayToTeach key={way.title}{...way}/>))}
           </ul>
         </section>
         <section>
