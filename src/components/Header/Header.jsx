@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '/public/logo-name.svg';
+import './Header.css';
 export default function Header(){
     const [now,setNow] = useState(new Date());
     setInterval(() => {

@@ -1,5 +1,5 @@
- import {ways} from '../../data'
- import WayToTeach from '../WayToTeach';
+ import {ways} from '../data'
+ import WayToTeach from './WayToTeach';
 
 
 export default function TeachingSection(){

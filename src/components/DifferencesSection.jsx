@@ -1,6 +1,6 @@
-import Button from './Button'
+import Button from './Button/Button'
 import { useState } from 'react';
-import {differences} from '../../data'
+import {differences} from '../data'
 
 export default function DifferencesSection(){
     const [contentType, setContentType] =useState(null); 
