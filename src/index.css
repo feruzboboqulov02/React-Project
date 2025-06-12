@@ -50,3 +50,10 @@ p {
 .centered {
   text-align: center;
 }
+.control{
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  padding: 0,5rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
