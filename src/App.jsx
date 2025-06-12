@@ -4,13 +4,13 @@ import DifferencesSection from './components/Button/DifferencesSection';
 
 export default function App() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <TeachingSection />
         <DifferencesSection />
       </main>
-    </div>
+    </>
   )
 }
   
